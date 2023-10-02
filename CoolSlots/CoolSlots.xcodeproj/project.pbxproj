@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27A8D99D2ACADD9F00078E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8D99C2ACADD9F00078E74 /* AppDelegate.swift */; };
+		27A8D99F2ACADD9F00078E74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8D99E2ACADD9F00078E74 /* SceneDelegate.swift */; };
+		27A8D9A12ACADD9F00078E74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8D9A02ACADD9F00078E74 /* ViewController.swift */; };
+		27A8D9A42ACADD9F00078E74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A8D9A22ACADD9F00078E74 /* Main.storyboard */; };
+		27A8D9A72ACADD9F00078E74 /* CoolSlots.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27A8D9A52ACADD9F00078E74 /* CoolSlots.xcdatamodeld */; };
+		27A8D9A92ACADDA000078E74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A8D9A82ACADDA000078E74 /* Assets.xcassets */; };
+		27A8D9AC2ACADDA000078E74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A8D9AA2ACADDA000078E74 /* LaunchScreen.storyboard */; };
+		27A8D9B72ACADDA000078E74 /* CoolSlotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8D9B62ACADDA000078E74 /* CoolSlotsTests.swift */; };
+		27A8D9C12ACADDA000078E74 /* CoolSlotsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8D9C02ACADDA000078E74 /* CoolSlotsUITests.swift */; };
+		27A8D9C32ACADDA000078E74 /* CoolSlotsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8D9C22ACADDA000078E74 /* CoolSlotsUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27A8D9B32ACADDA000078E74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27A8D9912ACADD9F00078E74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27A8D9982ACADD9F00078E74;
+			remoteInfo = CoolSlots;
+		};
+		27A8D9BD2ACADDA000078E74 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27A8D9912ACADD9F00078E74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27A8D9982ACADD9F00078E74;
+			remoteInfo = CoolSlots;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27A8D9992ACADD9F00078E74 /* CoolSlots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolSlots.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A8D99C2ACADD9F00078E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27A8D99E2ACADD9F00078E74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		27A8D9A02ACADD9F00078E74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		27A8D9A32ACADD9F00078E74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27A8D9A62ACADD9F00078E74 /* CoolSlots.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoolSlots.xcdatamodel; sourceTree = "<group>"; };
+		27A8D9A82ACADDA000078E74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27A8D9AB2ACADDA000078E74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27A8D9AD2ACADDA000078E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27A8D9B22ACADDA000078E74 /* CoolSlotsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolSlotsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A8D9B62ACADDA000078E74 /* CoolSlotsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolSlotsTests.swift; sourceTree = "<group>"; };
+		27A8D9BC2ACADDA000078E74 /* CoolSlotsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolSlotsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A8D9C02ACADDA000078E74 /* CoolSlotsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolSlotsUITests.swift; sourceTree = "<group>"; };
+		27A8D9C22ACADDA000078E74 /* CoolSlotsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolSlotsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27A8D9962ACADD9F00078E74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A8D9AF2ACADDA000078E74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A8D9B92ACADDA000078E74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27A8D9902ACADD9F00078E74 = {
+			isa = PBXGroup;
+			children = (
+				27A8D99B2ACADD9F00078E74 /* CoolSlots */,
+				27A8D9B52ACADDA000078E74 /* CoolSlotsTests */,
+				27A8D9BF2ACADDA000078E74 /* CoolSlotsUITests */,
+				27A8D99A2ACADD9F00078E74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27A8D99A2ACADD9F00078E74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27A8D9992ACADD9F00078E74 /* CoolSlots.app */,
+				27A8D9B22ACADDA000078E74 /* CoolSlotsTests.xctest */,
+				27A8D9BC2ACADDA000078E74 /* CoolSlotsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27A8D99B2ACADD9F00078E74 /* CoolSlots */ = {
+			isa = PBXGroup;
+			children = (
+				27A8D9CF2ACAE1E700078E74 /* Game */,
+				27A8D99C2ACADD9F00078E74 /* AppDelegate.swift */,
+				27A8D9A82ACADDA000078E74 /* Assets.xcassets */,
+				27A8D99E2ACADD9F00078E74 /* SceneDelegate.swift */,
+				27A8D9A02ACADD9F00078E74 /* ViewController.swift */,
+				27A8D9A22ACADD9F00078E74 /* Main.storyboard */,
+				27A8D9AA2ACADDA000078E74 /* LaunchScreen.storyboard */,
+				27A8D9AD2ACADDA000078E74 /* Info.plist */,
+				27A8D9A52ACADD9F00078E74 /* CoolSlots.xcdatamodeld */,
+			);
+			path = CoolSlots;
+			sourceTree = "<group>";
+		};
+		27A8D9B52ACADDA000078E74 /* CoolSlotsTests */ = {
+			isa = PBXGroup;
+			children = (
+				27A8D9B62ACADDA000078E74 /* CoolSlotsTests.swift */,
+			);
+			path = CoolSlotsTests;
+			sourceTree = "<group>";
+		};
+		27A8D9BF2ACADDA000078E74 /* CoolSlotsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				27A8D9C02ACADDA000078E74 /* CoolSlotsUITests.swift */,
+				27A8D9C22ACADDA000078E74 /* CoolSlotsUITestsLaunchTests.swift */,
+			);
+			path = CoolSlotsUITests;
+			sourceTree = "<group>";
+		};
+		27A8D9CF2ACAE1E700078E74 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27A8D9982ACADD9F00078E74 /* CoolSlots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A8D9C62ACADDA000078E74 /* Build configuration list for PBXNativeTarget "CoolSlots" */;
+			buildPhases = (
+				27A8D9952ACADD9F00078E74 /* Sources */,
+				27A8D9962ACADD9F00078E74 /* Frameworks */,
+				27A8D9972ACADD9F00078E74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoolSlots;
+			productName = CoolSlots;
+			productReference = 27A8D9992ACADD9F00078E74 /* CoolSlots.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27A8D9B12ACADDA000078E74 /* CoolSlotsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A8D9C92ACADDA000078E74 /* Build configuration list for PBXNativeTarget "CoolSlotsTests" */;
+			buildPhases = (
+				27A8D9AE2ACADDA000078E74 /* Sources */,
+				27A8D9AF2ACADDA000078E74 /* Frameworks */,
+				27A8D9B02ACADDA000078E74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27A8D9B42ACADDA000078E74 /* PBXTargetDependency */,
+			);
+			name = CoolSlotsTests;
+			productName = CoolSlotsTests;
+			productReference = 27A8D9B22ACADDA000078E74 /* CoolSlotsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27A8D9BB2ACADDA000078E74 /* CoolSlotsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27A8D9CC2ACADDA000078E74 /* Build configuration list for PBXNativeTarget "CoolSlotsUITests" */;
+			buildPhases = (
+				27A8D9B82ACADDA000078E74 /* Sources */,
+				27A8D9B92ACADDA000078E74 /* Frameworks */,
+				27A8D9BA2ACADDA000078E74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27A8D9BE2ACADDA000078E74 /* PBXTargetDependency */,
+			);
+			name = CoolSlotsUITests;
+			productName = CoolSlotsUITests;
+			productReference = 27A8D9BC2ACADDA000078E74 /* CoolSlotsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27A8D9912ACADD9F00078E74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					27A8D9982ACADD9F00078E74 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					27A8D9B12ACADDA000078E74 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 27A8D9982ACADD9F00078E74;
+					};
+					27A8D9BB2ACADDA000078E74 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 27A8D9982ACADD9F00078E74;
+					};
+				};
+			};
+			buildConfigurationList = 27A8D9942ACADD9F00078E74 /* Build configuration list for PBXProject "CoolSlots" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27A8D9902ACADD9F00078E74;
+			productRefGroup = 27A8D99A2ACADD9F00078E74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27A8D9982ACADD9F00078E74 /* CoolSlots */,
+				27A8D9B12ACADDA000078E74 /* CoolSlotsTests */,
+				27A8D9BB2ACADDA000078E74 /* CoolSlotsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27A8D9972ACADD9F00078E74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A8D9AC2ACADDA000078E74 /* LaunchScreen.storyboard in Resources */,
+				27A8D9A92ACADDA000078E74 /* Assets.xcassets in Resources */,
+				27A8D9A42ACADD9F00078E74 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A8D9B02ACADDA000078E74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A8D9BA2ACADDA000078E74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27A8D9952ACADD9F00078E74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A8D9A72ACADD9F00078E74 /* CoolSlots.xcdatamodeld in Sources */,
+				27A8D9A12ACADD9F00078E74 /* ViewController.swift in Sources */,
+				27A8D99D2ACADD9F00078E74 /* AppDelegate.swift in Sources */,
+				27A8D99F2ACADD9F00078E74 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A8D9AE2ACADDA000078E74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A8D9B72ACADDA000078E74 /* CoolSlotsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27A8D9B82ACADDA000078E74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27A8D9C12ACADDA000078E74 /* CoolSlotsUITests.swift in Sources */,
+				27A8D9C32ACADDA000078E74 /* CoolSlotsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27A8D9B42ACADDA000078E74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27A8D9982ACADD9F00078E74 /* CoolSlots */;
+			targetProxy = 27A8D9B32ACADDA000078E74 /* PBXContainerItemProxy */;
+		};
+		27A8D9BE2ACADDA000078E74 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27A8D9982ACADD9F00078E74 /* CoolSlots */;
+			targetProxy = 27A8D9BD2ACADDA000078E74 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27A8D9A22ACADD9F00078E74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27A8D9A32ACADD9F00078E74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27A8D9AA2ACADDA000078E74 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27A8D9AB2ACADDA000078E74 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27A8D9C42ACADDA000078E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		27A8D9C52ACADDA000078E74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27A8D9C72ACADDA000078E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W4ZGXHX466;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoolSlots/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rw.shema.CoolSlots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27A8D9C82ACADDA000078E74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W4ZGXHX466;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CoolSlots/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rw.shema.CoolSlots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		27A8D9CA2ACADDA000078E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W4ZGXHX466;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rw.shema.CoolSlotsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoolSlots.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoolSlots";
+			};
+			name = Debug;
+		};
+		27A8D9CB2ACADDA000078E74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W4ZGXHX466;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rw.shema.CoolSlotsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoolSlots.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoolSlots";
+			};
+			name = Release;
+		};
+		27A8D9CD2ACADDA000078E74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W4ZGXHX466;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rw.shema.CoolSlotsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoolSlots;
+			};
+			name = Debug;
+		};
+		27A8D9CE2ACADDA000078E74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = W4ZGXHX466;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rw.shema.CoolSlotsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CoolSlots;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27A8D9942ACADD9F00078E74 /* Build configuration list for PBXProject "CoolSlots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A8D9C42ACADDA000078E74 /* Debug */,
+				27A8D9C52ACADDA000078E74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27A8D9C62ACADDA000078E74 /* Build configuration list for PBXNativeTarget "CoolSlots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A8D9C72ACADDA000078E74 /* Debug */,
+				27A8D9C82ACADDA000078E74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27A8D9C92ACADDA000078E74 /* Build configuration list for PBXNativeTarget "CoolSlotsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A8D9CA2ACADDA000078E74 /* Debug */,
+				27A8D9CB2ACADDA000078E74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27A8D9CC2ACADDA000078E74 /* Build configuration list for PBXNativeTarget "CoolSlotsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27A8D9CD2ACADDA000078E74 /* Debug */,
+				27A8D9CE2ACADDA000078E74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		27A8D9A52ACADD9F00078E74 /* CoolSlots.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				27A8D9A62ACADD9F00078E74 /* CoolSlots.xcdatamodel */,
+			);
+			currentVersion = 27A8D9A62ACADD9F00078E74 /* CoolSlots.xcdatamodel */;
+			path = CoolSlots.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 27A8D9912ACADD9F00078E74 /* Project object */;
+}
