@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		279F5E892ACB38C2000FCF70 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279F5E882ACB38C2000FCF70 /* LoaderView.swift */; };
 		27A7386D2ACB1EF800DBE601 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A7386C2ACB1EF800DBE601 /* Images.xcassets */; };
 		27A8D99D2ACADD9F00078E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8D99C2ACADD9F00078E74 /* AppDelegate.swift */; };
 		27A8D99F2ACADD9F00078E74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8D99E2ACADD9F00078E74 /* SceneDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		279F5E882ACB38C2000FCF70 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		27A7386C2ACB1EF800DBE601 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		27A8D9992ACADD9F00078E74 /* CoolSlots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolSlots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A8D99C2ACADD9F00078E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		279F5E812ACB34D1000FCF70 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		279F5E822ACB37B9000FCF70 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				279F5E832ACB37C7000FCF70 /* UI */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		279F5E832ACB37C7000FCF70 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				279F5E852ACB386B000FCF70 /* ViewController */,
+				279F5E842ACB384D000FCF70 /* Views */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		279F5E842ACB384D000FCF70 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		279F5E852ACB386B000FCF70 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				279F5E882ACB38C2000FCF70 /* LoaderView.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		27A738672ACB1BA100DBE601 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +161,7 @@
 		27A8D99B2ACADD9F00078E74 /* CoolSlots */ = {
 			isa = PBXGroup;
 			children = (
+				279F5E822ACB37B9000FCF70 /* Shared */,
 				27A738672ACB1BA100DBE601 /* Resources */,
 				27A8D9CF2ACAE1E700078E74 /* Game */,
 				27A8D99C2ACADD9F00078E74 /* AppDelegate.swift */,
@@ -153,6 +195,7 @@
 		27A8D9CF2ACAE1E700078E74 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				279F5E812ACB34D1000FCF70 /* Scenes */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -291,6 +334,7 @@
 			files = (
 				27A8D9A72ACADD9F00078E74 /* CoolSlots.xcdatamodeld in Sources */,
 				27A8D9A12ACADD9F00078E74 /* ViewController.swift in Sources */,
+				279F5E892ACB38C2000FCF70 /* LoaderView.swift in Sources */,
 				27A8D99D2ACADD9F00078E74 /* AppDelegate.swift in Sources */,
 				27A8D99F2ACADD9F00078E74 /* SceneDelegate.swift in Sources */,
 			);
