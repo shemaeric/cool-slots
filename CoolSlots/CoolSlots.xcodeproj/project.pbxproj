@@ -10,6 +10,7 @@
 		270E0AEB2ADE809C008CAE37 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 270E0AEA2ADE809C008CAE37 /* BebasNeue-Regular.ttf */; };
 		270E0AED2ADE875C008CAE37 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270E0AEC2ADE875C008CAE37 /* UIFont.swift */; };
 		270E0AEF2ADEC81A008CAE37 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270E0AEE2ADEC81A008CAE37 /* NavigationBar.swift */; };
+		275035542ADFB642004726E7 /* ProfilePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275035532ADFB642004726E7 /* ProfilePopup.swift */; };
 		279F5E892ACB38C2000FCF70 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279F5E882ACB38C2000FCF70 /* LoaderView.swift */; };
 		27A7386D2ACB1EF800DBE601 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A7386C2ACB1EF800DBE601 /* Images.xcassets */; };
 		27A89DF92ACC5254006E1E12 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A89DF82ACC5254006E1E12 /* Color+Extension.swift */; };
@@ -47,6 +48,7 @@
 		270E0AEA2ADE809C008CAE37 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		270E0AEC2ADE875C008CAE37 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		270E0AEE2ADEC81A008CAE37 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		275035532ADFB642004726E7 /* ProfilePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePopup.swift; sourceTree = "<group>"; };
 		279F5E882ACB38C2000FCF70 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		27A7386C2ACB1EF800DBE601 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		27A89DF82ACC5254006E1E12 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				279F5E882ACB38C2000FCF70 /* LoaderView.swift */,
+				275035532ADFB642004726E7 /* ProfilePopup.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				27A89DF92ACC5254006E1E12 /* Color+Extension.swift in Sources */,
 				27A8D9A12ACADD9F00078E74 /* ViewController.swift in Sources */,
 				27A89DFB2ACC5806006E1E12 /* UIView.swift in Sources */,
+				275035542ADFB642004726E7 /* ProfilePopup.swift in Sources */,
 				270E0AED2ADE875C008CAE37 /* UIFont.swift in Sources */,
 				270E0AEF2ADEC81A008CAE37 /* NavigationBar.swift in Sources */,
 				279F5E892ACB38C2000FCF70 /* LoaderView.swift in Sources */,

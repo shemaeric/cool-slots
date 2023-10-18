@@ -11,14 +11,18 @@ class CustomNavigationBar: UIView {
     
     // MARK: - Properties
     
+    private weak var presentingViewController: UIViewController?
+    
     private let height: CGFloat
     
     // MARK: - Initialization
     
-    init(width: CGFloat) {
+    init(width: CGFloat, presentingViewController: UIViewController?) {
         self.height = 44
         let frame = CGRect(x: 0, y: 5, width: width, height: height)
         super.init(frame: frame)
+        self.presentingViewController = presentingViewController
+        
         self.applyGradient(colors: [UIColor(hex: "0E21A0"), UIColor(hex: "4D2DB7")], startPoint: CGPoint(x: 0.0, y: 1.0), endPoint: CGPoint(x: 1.0, y: 1.0), cornerRadius: 20.0)
         applyNavigationBarStyles()
         
@@ -93,6 +97,10 @@ class CustomNavigationBar: UIView {
         profileIconImageView.transform = CGAffineTransform(scaleX: 2.0, y: 2.0) // Increase the scale
         
         profileIconStackView.addArrangedSubview(profileIconImageView)
+        
+        // Add tap gesture recognizer
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(showPopup))
+        profileIconStackView.addGestureRecognizer(tapGestureRecognizer)
         
         return profileIconStackView
     }
@@ -199,5 +207,15 @@ class CustomNavigationBar: UIView {
         label.textColor = textColor
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }
+    
+    @objc private func showPopup() {
+        let popupVC = ProfilePopup()
+        popupVC.modalPresentationStyle = .overCurrentContext
+        
+        // Check if the presenting view controller is available
+        if let presentingVC = presentingViewController {
+            presentingVC.present(popupVC, animated: true, completion: nil)
+        }
     }
 }
