@@ -13,10 +13,10 @@ class SlotMachineView: UIView {
     var numColumns: Int = 5
     var reelWidth: CGFloat = 0
     var reelHeight: CGFloat = 0
-    var spacing: CGFloat = 10 // Adjust this to set the space between icons
+    var spacing: CGFloat = 20 // Adjust this to set the space between icons
     var reels: [[UIImageView]] = []
     
-    let symbols = ["avocado", "banana", "orange", "plum", "bell"]
+    let symbols = ["avocado", "banana", "berries", "crown", "seven", "tomato", "watermelon"]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,7 +46,7 @@ class SlotMachineView: UIView {
                 let x = CGFloat(column) * (reelWidth + columnSpacing)
                 let y = CGFloat(row) * (reelHeight + rowSpacing)
                 let symbolImageView = UIImageView(frame: CGRect(x: x, y: y, width: reelWidth, height: reelHeight))
-                symbolImageView.image = UIImage(systemName: "apple.logo")
+                symbolImageView.image = UIImage(named: symbolName)
                 reel.append(symbolImageView)
                 addSubview(symbolImageView)
             }
@@ -86,6 +86,20 @@ class SlotMachineView: UIView {
             // Remove the SlotSpinningView from the SlotMachineView
             spinningView.removeFromSuperview()
             visualEffectView.removeFromSuperview()
+            
+            // Shuffle the symbols
+            self.shuffleSymbols()
+        }
+    }
+    
+    func shuffleSymbols() {
+        for row in 0..<numRows {
+            for column in 0..<numColumns {
+                let symbolIndex = Int(arc4random_uniform(UInt32(symbols.count)))
+                let symbolName = symbols[symbolIndex]
+                let symbolImageView = reels[row][column]
+                symbolImageView.image = UIImage(named: symbolName)
+            }
         }
     }
 }

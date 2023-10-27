@@ -12,7 +12,7 @@ class CustomBottomBar: UIView {
     // MARK: - Properties
     
     private weak var presentingViewController: UIViewController?
-    
+    var spinFunc: (() -> Void)?
     // MARK: - Initialization
     
     init(width: CGFloat, parentHeight: CGFloat, presentingViewController: UIViewController?) {
@@ -196,6 +196,7 @@ class CustomBottomBar: UIView {
         spinButton.titleLabel?.font = UIFont.bebasNeueFont(ofSize: 26)
         spinButton.layer.borderColor = UIColor.goldColor.cgColor
         spinButton.layer.borderWidth = 2.0
+        spinButton.addTarget(self, action: #selector(spinBtn), for: .touchUpInside)
         
         // Set a fixed width of 100
         spinButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
@@ -219,5 +220,9 @@ class CustomBottomBar: UIView {
     @objc private func increaseBet() {
         // Handle the logic to increase the bet amount here
         // Update the betLabel text accordingly
+    }
+    
+    @objc private func spinBtn() {
+        spinFunc?()
     }
 }

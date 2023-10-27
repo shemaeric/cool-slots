@@ -13,6 +13,11 @@
 		273CD50C2AE1011900985C0E /* SlotMachineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273CD50B2AE1011900985C0E /* SlotMachineView.swift */; };
 		273CD50E2AE171BA00985C0E /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273CD50D2AE171BA00985C0E /* BottomBar.swift */; };
 		275035542ADFB642004726E7 /* ProfilePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275035532ADFB642004726E7 /* ProfilePopup.swift */; };
+		279ED2552AEBABBB009A76C2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 279ED2542AEBABBB009A76C2 /* Lottie */; };
+		279ED2582AEBACA6009A76C2 /* loader777.json in Resources */ = {isa = PBXBuildFile; fileRef = 279ED2572AEBACA6009A76C2 /* loader777.json */; };
+		279ED25B2AEBB558009A76C2 /* SlotSpinningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279ED25A2AEBB558009A76C2 /* SlotSpinningView.swift */; };
+		279ED25F2AEBD27E009A76C2 /* winCoins.json in Resources */ = {isa = PBXBuildFile; fileRef = 279ED25E2AEBD27E009A76C2 /* winCoins.json */; };
+		279ED2612AEBD2D1009A76C2 /* WinCoinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279ED2602AEBD2D1009A76C2 /* WinCoinsView.swift */; };
 		279F5E892ACB38C2000FCF70 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279F5E882ACB38C2000FCF70 /* LoaderView.swift */; };
 		27A7386D2ACB1EF800DBE601 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27A7386C2ACB1EF800DBE601 /* Images.xcassets */; };
 		27A89DF92ACC5254006E1E12 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A89DF82ACC5254006E1E12 /* Color+Extension.swift */; };
@@ -53,6 +58,10 @@
 		273CD50B2AE1011900985C0E /* SlotMachineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotMachineView.swift; sourceTree = "<group>"; };
 		273CD50D2AE171BA00985C0E /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		275035532ADFB642004726E7 /* ProfilePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePopup.swift; sourceTree = "<group>"; };
+		279ED2572AEBACA6009A76C2 /* loader777.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader777.json; sourceTree = "<group>"; };
+		279ED25A2AEBB558009A76C2 /* SlotSpinningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotSpinningView.swift; sourceTree = "<group>"; };
+		279ED25E2AEBD27E009A76C2 /* winCoins.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = winCoins.json; sourceTree = "<group>"; };
+		279ED2602AEBD2D1009A76C2 /* WinCoinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinCoinsView.swift; sourceTree = "<group>"; };
 		279F5E882ACB38C2000FCF70 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		27A7386C2ACB1EF800DBE601 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		27A89DF82ACC5254006E1E12 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
@@ -78,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				279ED2552AEBABBB009A76C2 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +116,24 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		279ED2562AEBAC84009A76C2 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				279ED2572AEBACA6009A76C2 /* loader777.json */,
+				279ED25E2AEBD27E009A76C2 /* winCoins.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		279ED2592AEBB530009A76C2 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				279ED25A2AEBB558009A76C2 /* SlotSpinningView.swift */,
+				279ED2602AEBD2D1009A76C2 /* WinCoinsView.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		279F5E812ACB34D1000FCF70 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +152,7 @@
 		279F5E832ACB37C7000FCF70 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				279ED2592AEBB530009A76C2 /* Animations */,
 				279F5E852ACB386B000FCF70 /* ViewController */,
 				279F5E842ACB384D000FCF70 /* Views */,
 			);
@@ -161,6 +190,7 @@
 		27A7386A2ACB1D4900DBE601 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				279ED2562AEBAC84009A76C2 /* Lottie */,
 				270E0AE92ADE8069008CAE37 /* Fonts */,
 				27A8D9A82ACADDA000078E74 /* Assets.xcassets */,
 				27A7386C2ACB1EF800DBE601 /* Images.xcassets */,
@@ -256,6 +286,9 @@
 			dependencies = (
 			);
 			name = CoolSlots;
+			packageProductDependencies = (
+				279ED2542AEBABBB009A76C2 /* Lottie */,
+			);
 			productName = CoolSlots;
 			productReference = 27A8D9992ACADD9F00078E74 /* CoolSlots.app */;
 			productType = "com.apple.product-type.application";
@@ -328,6 +361,9 @@
 				Base,
 			);
 			mainGroup = 27A8D9902ACADD9F00078E74;
+			packageReferences = (
+				279ED2532AEBABBB009A76C2 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = 27A8D99A2ACADD9F00078E74 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -344,10 +380,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				279ED25F2AEBD27E009A76C2 /* winCoins.json in Resources */,
 				270E0AEB2ADE809C008CAE37 /* BebasNeue-Regular.ttf in Resources */,
 				27A8D9AC2ACADDA000078E74 /* LaunchScreen.storyboard in Resources */,
 				27A7386D2ACB1EF800DBE601 /* Images.xcassets in Resources */,
 				27A8D9A92ACADDA000078E74 /* Assets.xcassets in Resources */,
+				279ED2582AEBACA6009A76C2 /* loader777.json in Resources */,
 				27A8D9A42ACADD9F00078E74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,8 +421,10 @@
 				279F5E892ACB38C2000FCF70 /* LoaderView.swift in Sources */,
 				273CD50E2AE171BA00985C0E /* BottomBar.swift in Sources */,
 				273CD50C2AE1011900985C0E /* SlotMachineView.swift in Sources */,
+				279ED2612AEBD2D1009A76C2 /* WinCoinsView.swift in Sources */,
 				27A8D99D2ACADD9F00078E74 /* AppDelegate.swift in Sources */,
 				27A8D99F2ACADD9F00078E74 /* SceneDelegate.swift in Sources */,
+				279ED25B2AEBB558009A76C2 /* SlotSpinningView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,6 +766,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		279ED2532AEBABBB009A76C2 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		279ED2542AEBABBB009A76C2 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 279ED2532AEBABBB009A76C2 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		27A8D9A52ACADD9F00078E74 /* CoolSlots.xcdatamodeld */ = {

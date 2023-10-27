@@ -68,17 +68,10 @@ class ViewController: UIViewController {
         slotMachineView = SlotMachineView(frame: CGRect(x: slotMachineX, y: slotMachineY, width: slotMachineWidth, height: slotMachineHeight))
         slotMachineView.backgroundColor = .blue
         parentView2.addSubview(slotMachineView)
-
-        // Add a button for spinning the slot machine
-        let spinButton = UIButton(frame: CGRect(x: 50, y: 700, width: 300, height: 50))
-        spinButton.setTitle("Spin", for: .normal)
-        spinButton.backgroundColor = UIColor.red
-        spinButton.addTarget(self, action: #selector(spinButtonTapped), for: .touchUpInside)
-        view.addSubview(spinButton)
         
         // Create a custom bottom bar
         let customBottomBar = CustomBottomBar(width: navBarWidth, parentHeight: view.frame.height, presentingViewController: self)
-        
+        customBottomBar.spinFunc = slotMachineView.spin
         // Center the custom bottom bar horizontally on the screen
         customBottomBar.center.x = view.center.x
         
@@ -87,6 +80,7 @@ class ViewController: UIViewController {
     }
 
     @objc func spinButtonTapped() {
+        print("the spin is being called now -----")
         // Call the spin() method of the SlotMachineView
         slotMachineView.spin()
     }
