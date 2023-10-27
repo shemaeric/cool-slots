@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Lottie
 
 class SlotMachineView: UIView {
     var numRows: Int = 5
@@ -15,7 +16,7 @@ class SlotMachineView: UIView {
     var spacing: CGFloat = 10 // Adjust this to set the space between icons
     var reels: [[UIImageView]] = []
     
-    let symbols = ["cherry", "lemon", "orange", "plum", "bell"]
+    let symbols = ["avocado", "banana", "orange", "plum", "bell"]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,14 +30,14 @@ class SlotMachineView: UIView {
     
     func setupSlotMachine() {
         backgroundColor = UIColor.black
-
+        
         reelWidth = (frame.size.height - CGFloat(numColumns - 1) * spacing) / CGFloat(numColumns)
         reelHeight = (frame.size.height - CGFloat(numRows - 1) * spacing) / CGFloat(numRows)
         
         // Calculate row and column spacings
         let rowSpacing = (frame.size.height - CGFloat(numRows) * reelHeight) / CGFloat(numRows - 1)
         let columnSpacing = (frame.size.width - CGFloat(numColumns) * reelWidth) / CGFloat(numColumns - 1)
-
+        
         for row in 0..<numRows {
             var reel: [UIImageView] = []
             for column in 0..<numColumns {
@@ -53,7 +54,38 @@ class SlotMachineView: UIView {
         }
     }
     
+    
     func spin() {
-        // Implement the spinning animation logic here
+        // Disable interaction while spinning
+        isUserInteractionEnabled = false
+        
+        // Create a UIVisualEffectView with a UIBlurEffect
+        let blurEffect = UIBlurEffect(style: .light) // Adjust the style as needed
+        let visualEffectView = UIVisualEffectView(effect: blurEffect)
+        visualEffectView.frame = bounds
+        addSubview(visualEffectView)
+        
+        // Create and set up the SlotSpinningView
+        let spinningView = SlotSpinningView(frame: bounds)
+        spinningView.setupAnimationView()
+        
+        // Add the SlotSpinningView on top of the SlotMachineView
+        addSubview(spinningView)
+        
+        // Define a delay of 3 seconds
+        let delayInSeconds: TimeInterval = 4.5
+        
+        // Create a dispatch queue to stop the animation after the delay
+        DispatchQueue.main.asyncAfter(deadline: .now() + delayInSeconds) {
+            // Re-enable interaction after spinning
+            self.isUserInteractionEnabled = true
+            
+            // Stop the animation in the SlotSpinningView
+            spinningView.stopAnimation()
+            
+            // Remove the SlotSpinningView from the SlotMachineView
+            spinningView.removeFromSuperview()
+            visualEffectView.removeFromSuperview()
+        }
     }
 }
