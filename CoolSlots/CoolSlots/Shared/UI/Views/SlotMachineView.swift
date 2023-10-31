@@ -60,7 +60,7 @@ class SlotMachineView: UIView {
         isUserInteractionEnabled = false
         
         // Create a UIVisualEffectView with a UIBlurEffect
-        let blurEffect = UIBlurEffect(style: .light) // Adjust the style as needed
+        let blurEffect = UIBlurEffect(style: .light)
         let visualEffectView = UIVisualEffectView(effect: blurEffect)
         visualEffectView.frame = bounds
         addSubview(visualEffectView)

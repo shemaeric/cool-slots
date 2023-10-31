@@ -6,15 +6,30 @@
 //
 
 import UIKit
+import Lottie
 
 class WinCoinsView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    private var animationView = LottieAnimationView(name: "winCoins")
 
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupAnimationView() {
+        animationView.frame = frame
+        animationView.contentMode = .scaleAspectFit
+        animationView.loopMode = .loop
+        animationView.animationSpeed = 1.0
+        addSubview(animationView)
+        animationView.play()
+    }
+    
+    func stopAnimation() {
+        animationView.stop()
+    }
 }

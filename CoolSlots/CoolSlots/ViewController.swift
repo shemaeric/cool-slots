@@ -15,8 +15,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .red
+        let backgroundImage = UIImageView(image: UIImage(named: "appBg"))
+        backgroundImage.contentMode = .scaleAspectFill
+        backgroundImage.frame = view.bounds
 
+        view.addSubview(backgroundImage)
+        view.sendSubviewToBack(backgroundImage)
+        
         // Calculate the width of the navigation bar as 80% of the screen width
         let navBarWidth = view.frame.width * 0.9
 
@@ -33,7 +38,7 @@ class ViewController: UIViewController {
         let parentView = UIView()
         parentView.frame = CGRect(x: 0, y: 0, width: view.frame.width / 2, height: view.frame.height / 1.5)
         parentView.center = view.center
-        parentView.backgroundColor = .blue
+        parentView.backgroundColor = UIColor.slotBackground()
         parentView.layer.borderColor = UIColor.goldColor.cgColor
         parentView.layer.borderWidth = 4
         parentView.layer.cornerRadius = 6
@@ -50,7 +55,7 @@ class ViewController: UIViewController {
         let parentView2Y = (parentView.frame.height - parentView2Height) / 2
         
         parentView2.frame = CGRect(x: parentView2X, y: parentView2Y, width: parentView2Width, height: parentView2Height)
-        parentView2.backgroundColor = .blue // Set the background color as needed
+        parentView2.backgroundColor = UIColor.slotBackground()
         parentView2.layer.borderColor = UIColor.goldColor.cgColor
         parentView2.layer.borderWidth = 1
         parentView2.layer.cornerRadius = 4
@@ -66,7 +71,7 @@ class ViewController: UIViewController {
 
         // Add the slotMachineView inside the parent view
         slotMachineView = SlotMachineView(frame: CGRect(x: slotMachineX, y: slotMachineY, width: slotMachineWidth, height: slotMachineHeight))
-        slotMachineView.backgroundColor = .blue
+        slotMachineView.backgroundColor = UIColor.slotBackground()
         parentView2.addSubview(slotMachineView)
         
         // Create a custom bottom bar
@@ -83,6 +88,11 @@ class ViewController: UIViewController {
         print("the spin is being called now -----")
         // Call the spin() method of the SlotMachineView
         slotMachineView.spin()
+        
+        let winCoinsViedw = WinCoinsView(frame: view.bounds)
+        winCoinsViedw.setupAnimationView()
+        
+        view.addSubview(winCoinsViedw)
     }
 }
 
