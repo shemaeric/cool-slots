@@ -22,7 +22,7 @@ class CustomBottomBar: UIView {
         super.init(frame: frame)
         self.presentingViewController = presentingViewController
         
-        self.applyGradient(colors: [UIColor(hex: "0E21A0"), UIColor(hex: "4D2DB7")], startPoint: CGPoint(x: 0.0, y: 1.0), endPoint: CGPoint(x: 1.0, y: 1.0), cornerRadius: 20.0)
+        backgroundColor = UIColor.slotBackground()
         applyNavigationBarStyles()
         
         let stackView = createBottomBarStackView()
@@ -77,13 +77,16 @@ class CustomBottomBar: UIView {
     private func createTotalBetView() -> UIView {
         // Create a view that holds the Total Bet components
         let totalBetView = UIView()
-        
+//        totalBetView.backgroundColor = .red
         // Create the minus button
         let minusButton = UIButton()
         minusButton.setTitle("-", for: .normal)
         minusButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        minusButton.setTitleColor(UIColor.white, for: .normal)
-        minusButton.backgroundColor = UIColor(hex: "4D2DB7")
+        minusButton.setTitleColor(UIColor.black, for: .normal)
+        minusButton.backgroundColor = UIColor.goldColor
+        minusButton.layer.borderColor = UIColor.white.cgColor
+        minusButton.layer.borderWidth = 2.0
+        minusButton.layer.cornerRadius = 8
         // Configure the button's appearance and add any necessary actions
         minusButton.addTarget(self, action: #selector(decreaseBet), for: .touchUpInside)
         minusButton.translatesAutoresizingMaskIntoConstraints = false
@@ -96,14 +99,17 @@ class CustomBottomBar: UIView {
         let betLabel = UILabel()
         betLabel.text = "10000000" // You can set the initial value
         betLabel.textColor = UIColor.white
-        betLabel.font = UIFont.systemFont(ofSize: 16)
+        betLabel.font = UIFont.bebasNeueFont(ofSize: 20)
         
         // Create the plus button
         let plusButton = UIButton()
         plusButton.setTitle("+", for: .normal)
         plusButton.titleLabel?.font = UIFont.systemFont(ofSize: 20)
-        plusButton.setTitleColor(UIColor.white, for: .normal)
-        plusButton.backgroundColor = UIColor(hex: "4D2DB7")
+        plusButton.setTitleColor(UIColor.black, for: .normal)
+        plusButton.backgroundColor = UIColor.goldColor
+        plusButton.layer.borderColor = UIColor.white.cgColor
+        plusButton.layer.borderWidth = 2.0
+        plusButton.layer.cornerRadius = 8
         // Configure the button's appearance and add any necessary actions
         plusButton.addTarget(self, action: #selector(increaseBet), for: .touchUpInside)
         
@@ -139,10 +145,12 @@ class CustomBottomBar: UIView {
         let totalWinView = UIView()
 
         // Set the background color for the totalWinView
-        totalWinView.backgroundColor = UIColor.lightGray // Background color
+        totalWinView.backgroundColor = UIColor.goldColor // Background color
 
         // Set the corner radius for the totalWinView (optional)
         totalWinView.layer.cornerRadius = 10
+        totalWinView.layer.borderColor = UIColor.white.cgColor
+        totalWinView.layer.borderWidth = 2.0
 
         // Create a stack view to hold the winLabel and subLabel
         let stackView = UIStackView()
@@ -152,8 +160,8 @@ class CustomBottomBar: UIView {
 
         // Create a label for displaying the total win amount
         let winLabel = UILabel()
-        winLabel.text = "0"
-        winLabel.font = UIFont.boldSystemFont(ofSize: 24)
+        winLabel.text = "10000000"
+        winLabel.font = UIFont.bebasNeueFont(ofSize: 24)
 
         // Create a label for the sublabel (e.g., "wins")
         let subLabel = UILabel()
@@ -191,10 +199,10 @@ class CustomBottomBar: UIView {
     private func createSpinButton() -> UIButton {
         let spinButton = UIButton()
         spinButton.setTitle("Spin", for: .normal)
-        spinButton.backgroundColor = .white // Background color
+        spinButton.backgroundColor = UIColor.goldColor // Background color
         spinButton.setTitleColor(.black, for: .normal)
-        spinButton.titleLabel?.font = UIFont.bebasNeueFont(ofSize: 26)
-        spinButton.layer.borderColor = UIColor.goldColor.cgColor
+        spinButton.titleLabel?.font = UIFont.bebasNeueFont(ofSize: 22)
+        spinButton.layer.borderColor = UIColor.white.cgColor
         spinButton.layer.borderWidth = 2.0
         spinButton.addTarget(self, action: #selector(spinBtn), for: .touchUpInside)
         

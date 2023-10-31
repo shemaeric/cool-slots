@@ -23,7 +23,7 @@ class CustomNavigationBar: UIView {
         super.init(frame: frame)
         self.presentingViewController = presentingViewController
         
-        self.applyGradient(colors: [UIColor(hex: "0E21A0"), UIColor(hex: "4D2DB7")], startPoint: CGPoint(x: 0.0, y: 1.0), endPoint: CGPoint(x: 1.0, y: 1.0), cornerRadius: 20.0)
+        backgroundColor = UIColor.slotBackground()
         applyNavigationBarStyles()
         
         let stackView = createNavBarStackView()

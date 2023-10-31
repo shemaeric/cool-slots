@@ -17,7 +17,7 @@ class ProfilePopup: UIViewController {
         
         // Create a rectangular view with a gold border
         let profileView = UIView()
-        profileView.backgroundColor = .blue
+        profileView.backgroundColor = UIColor.slotBackground()
         profileView.layer.borderColor = UIColor.goldColor.cgColor
         profileView.layer.borderWidth = 6.0
         profileView.layer.cornerRadius = 10.0
@@ -69,7 +69,7 @@ class ProfilePopup: UIViewController {
         profileImageView.image = UIImage(systemName: "person") // Replace with your profile image
         profileImageView.contentMode = .scaleAspectFit
         profileImageView.translatesAutoresizingMaskIntoConstraints = false
-        profileImageView.backgroundColor = .blue
+        profileImageView.backgroundColor = .white
         profileImageView.layer.borderWidth = 2
         profileImageView.layer.borderColor = UIColor.goldColor.cgColor
         profileImageView.layer.cornerRadius = 10
