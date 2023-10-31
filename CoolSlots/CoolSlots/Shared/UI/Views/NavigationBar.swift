@@ -135,9 +135,11 @@ class CustomNavigationBar: UIView {
         titleCenterView.layer.borderColor = UIColor.goldColor.cgColor
         titleCenterView.layer.cornerRadius = 8
         
-        let titleLabel = createLabel(text: "Logo", fontSize: 24, textColor: .black)
-        titleLabel.textAlignment = .center
-        titleCenterView.addSubview(titleLabel)
+        let logoImageView = UIImageView(image: UIImage(named: "sevens"))
+        logoImageView.contentMode = .scaleAspectFit // Adjust content mode as needed
+        titleCenterView.addSubview(logoImageView)
+        
+        logoImageView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             titleCenterView.heightAnchor.constraint(equalToConstant: height),
@@ -145,8 +147,10 @@ class CustomNavigationBar: UIView {
         ])
         
         NSLayoutConstraint.activate([
-            titleLabel.centerXAnchor.constraint(equalTo: titleCenterView.centerXAnchor),
-            titleLabel.centerYAnchor.constraint(equalTo: titleCenterView.centerYAnchor)
+            logoImageView.centerXAnchor.constraint(equalTo: titleCenterView.centerXAnchor),
+            logoImageView.centerYAnchor.constraint(equalTo: titleCenterView.centerYAnchor),
+            logoImageView.widthAnchor.constraint(equalToConstant: 40),
+            logoImageView.heightAnchor.constraint(equalToConstant: 40)
         ])
         
         return titleCenterView
