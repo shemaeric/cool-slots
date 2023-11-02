@@ -15,8 +15,8 @@ class SlotMachineView: UIView {
     var reelHeight: CGFloat = 0
     var spacing: CGFloat = 20 // Adjust this to set the space between icons
     var reels: [[UIImageView]] = []
-    
-    let symbols = ["avocado", "banana", "berries", "crown", "seven", "tomato", "watermelon"]
+    var currentSymbols: [[SlotSymbol]] = []
+    var winAnimationFunc: (() -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,8 +41,8 @@ class SlotMachineView: UIView {
         for row in 0..<numRows {
             var reel: [UIImageView] = []
             for column in 0..<numColumns {
-                let symbolIndex = Int(arc4random_uniform(UInt32(symbols.count)))
-                let symbolName = symbols[symbolIndex]
+                let symbolIndex = Int(arc4random_uniform(UInt32(symbolsArray.count)))
+                let symbolName = symbolsArray[symbolIndex].name
                 let x = CGFloat(column) * (reelWidth + columnSpacing)
                 let y = CGFloat(row) * (reelHeight + rowSpacing)
                 let symbolImageView = UIImageView(frame: CGRect(x: x, y: y, width: reelWidth, height: reelHeight))
@@ -89,17 +89,95 @@ class SlotMachineView: UIView {
             
             // Shuffle the symbols
             self.shuffleSymbols()
+            
+            // Check the win
+            self.checkWin()
         }
     }
     
     func shuffleSymbols() {
+        var shuffledSymbols: [[SlotSymbol]] = []
         for row in 0..<numRows {
+            var rowSymbols: [SlotSymbol] = []
             for column in 0..<numColumns {
-                let symbolIndex = Int(arc4random_uniform(UInt32(symbols.count)))
-                let symbolName = symbols[symbolIndex]
+                let symbolIndex = Int(arc4random_uniform(UInt32(symbolsArray.count)))
+                let symbolName = symbolsArray[symbolIndex].name
                 let symbolImageView = reels[row][column]
                 symbolImageView.image = UIImage(named: symbolName)
+                rowSymbols.append(symbolsArray[symbolIndex])
+            }
+            shuffledSymbols.append(rowSymbols)
+        }
+        currentSymbols = shuffledSymbols
+    }
+    
+    func checkWin() {
+        
+        var totalWin = 0
+        var winAnimationSymbol: String? = nil
+        
+        // Check rows for winning combinations
+        for row in 0..<numRows {
+            var consecutiveCount = 1
+            var previousSymbol = currentSymbols[row][0].name
+            for column in 1..<numColumns {
+                let currentSymbol = currentSymbols[row][column].name
+                if currentSymbol == previousSymbol {
+                    consecutiveCount += 1
+                } else {
+                    consecutiveCount = 1
+                }
+                
+                if consecutiveCount >= 3 {
+                    if currentSymbol == "crown" || currentSymbol == "seven" {
+                        winAnimationSymbol = currentSymbol
+                    }
+                    // Found more than three consecutive matching symbols
+                    let symbolValue = symbolsArray.first { $0.name == previousSymbol }?.value ?? 0
+                    totalWin += symbolValue * consecutiveCount
+                    consecutiveCount = 0
+                }
+                
+                previousSymbol = currentSymbol
             }
         }
+        
+        // Check columns for winning combinations
+        for column in 0..<numColumns {
+            var consecutiveCount = 1
+            var previousSymbol = currentSymbols[0][column].name
+            for row in 1..<numRows {
+                let currentSymbol = currentSymbols[row][column].name
+                if currentSymbol == previousSymbol {
+                    consecutiveCount += 1
+                } else {
+                    consecutiveCount = 1
+                }
+                
+                if consecutiveCount >= 3 {
+                    // Found more than three consecutive matching symbols
+                    if currentSymbol == "crown" || currentSymbol == "seven" {
+                        winAnimationSymbol = currentSymbol
+                    }
+                    
+                    let symbolValue = symbolsArray.first { $0.name == previousSymbol }?.value ?? 0
+                    totalWin += symbolValue * consecutiveCount
+                    consecutiveCount = 0
+                }
+                
+                previousSymbol = currentSymbol
+            }
+        }
+        
+        // Display the result to the user
+        print("Total Win: \(totalWin)")
+        
+        if let animationSymbol = winAnimationSymbol {
+            
+        }
+        
+        // Finally, re-enable user interaction.
+        isUserInteractionEnabled = true
     }
+    
 }

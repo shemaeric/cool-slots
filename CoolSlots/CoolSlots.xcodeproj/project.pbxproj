@@ -32,6 +32,7 @@
 		27A8D9B72ACADDA000078E74 /* CoolSlotsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8D9B62ACADDA000078E74 /* CoolSlotsTests.swift */; };
 		27A8D9C12ACADDA000078E74 /* CoolSlotsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8D9C02ACADDA000078E74 /* CoolSlotsUITests.swift */; };
 		27A8D9C32ACADDA000078E74 /* CoolSlotsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A8D9C22ACADDA000078E74 /* CoolSlotsUITestsLaunchTests.swift */; };
+		27BABC4A2AF3C8BD00B79A6E /* SlotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BABC492AF3C8BD00B79A6E /* SlotData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		27A8D9BC2ACADDA000078E74 /* CoolSlotsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolSlotsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27A8D9C02ACADDA000078E74 /* CoolSlotsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolSlotsUITests.swift; sourceTree = "<group>"; };
 		27A8D9C22ACADDA000078E74 /* CoolSlotsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolSlotsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		27BABC492AF3C8BD00B79A6E /* SlotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		279F5E822ACB37B9000FCF70 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				27BABC482AF3C8A500B79A6E /* Model */,
 				279F5E832ACB37C7000FCF70 /* UI */,
 			);
 			path = Shared;
@@ -268,6 +271,14 @@
 				279F5E812ACB34D1000FCF70 /* Scenes */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		27BABC482AF3C8A500B79A6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27BABC492AF3C8BD00B79A6E /* SlotData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +433,7 @@
 				273CD50E2AE171BA00985C0E /* BottomBar.swift in Sources */,
 				273CD50C2AE1011900985C0E /* SlotMachineView.swift in Sources */,
 				279ED2612AEBD2D1009A76C2 /* WinCoinsView.swift in Sources */,
+				27BABC4A2AF3C8BD00B79A6E /* SlotData.swift in Sources */,
 				27A8D99D2ACADD9F00078E74 /* AppDelegate.swift in Sources */,
 				27A8D99F2ACADD9F00078E74 /* SceneDelegate.swift in Sources */,
 				279ED25B2AEBB558009A76C2 /* SlotSpinningView.swift in Sources */,

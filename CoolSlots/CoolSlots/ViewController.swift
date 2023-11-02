@@ -71,6 +71,7 @@ class ViewController: UIViewController {
         // Add the slotMachineView inside the parent view
         slotMachineView = SlotMachineView(frame: CGRect(x: slotMachineX, y: slotMachineY, width: slotMachineWidth, height: slotMachineHeight))
         slotMachineView.backgroundColor = UIColor.slotBackground()
+        slotMachineView.winAnimationFunc = self.runWinAnimation
         parentView2.addSubview(slotMachineView)
         
         // Create a custom bottom bar
@@ -87,11 +88,8 @@ class ViewController: UIViewController {
         view.addSubview(customBottomBar)
     }
 
-    @objc func spinButtonTapped() {
+    func runWinAnimation() {
         print("the spin is being called now -----")
-        // Call the spin() method of the SlotMachineView
-        slotMachineView.spin()
-        
         let winCoinsViedw = WinCoinsView(frame: view.bounds)
         winCoinsViedw.setupAnimationView()
         
