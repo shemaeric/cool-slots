@@ -14,6 +14,13 @@ class CustomNavigationBar: UIView {
     private weak var presentingViewController: UIViewController?
     
     private let height: CGFloat
+    var currentCoins: Int = 1000
+    var currentDiamonds: Int = 20
+    var currentLevel: Int = 0
+    
+    var coinsLabel: UILabel!
+    var diamondsLabel: UILabel!
+    var levelLabelValue: UILabel!
     
     // MARK: - Initialization
     
@@ -119,8 +126,9 @@ class CustomNavigationBar: UIView {
         
         stackView.addArrangedSubview(coinsIconImageView)
         
-        let coinsAmountLabel = createLabel(text: "1000", fontSize: 16, bold: true, textColor: .white)
-        stackView.addArrangedSubview(coinsAmountLabel)
+        let coinsAmountLabel = createLabel(text: "\(currentCoins)", fontSize: 16, bold: true, textColor: .white)
+        coinsLabel = coinsAmountLabel
+        stackView.addArrangedSubview(coinsLabel)
         
         return stackView
     }
@@ -164,7 +172,8 @@ class CustomNavigationBar: UIView {
         diamondsIconImageView.heightAnchor.constraint(equalToConstant: 25).isActive = true
         diamondsIconImageView.widthAnchor.constraint(equalTo: diamondsIconImageView.heightAnchor).isActive = true
         
-        let diamondsAmountLabel = createLabel(text: "500", fontSize: 16, bold: true, textColor: .white)
+        let diamondsAmountLabel = createLabel(text: "\(currentDiamonds)", fontSize: 16, bold: true, textColor: .white)
+        diamondsLabel = diamondsAmountLabel
         
         let levelIconImageView = UIImageView(image: UIImage(systemName: "star.fill"))
         levelIconImageView.contentMode = .scaleAspectFit
@@ -174,13 +183,13 @@ class CustomNavigationBar: UIView {
         levelIconImageView.widthAnchor.constraint(equalTo: levelIconImageView.heightAnchor).isActive = true
         
         let levelText = createLabel(text: "Level:", fontSize: 16, bold: true, textColor: .goldColor)
-        let levelTextLabel = createLabel(text: "10", fontSize: 16, bold: true, textColor: .white)
-        
-        let diamondsStackView = UIStackView(arrangedSubviews: [diamondsIconImageView, diamondsAmountLabel])
+        let levelTextLabel = createLabel(text: "\(currentLevel)", fontSize: 16, bold: true, textColor: .white)
+        levelLabelValue = levelTextLabel
+        let diamondsStackView = UIStackView(arrangedSubviews: [diamondsIconImageView, diamondsLabel])
         diamondsStackView.axis = .horizontal
         diamondsStackView.spacing = 5
         
-        let levelStackView = UIStackView(arrangedSubviews: [levelIconImageView,levelText , levelTextLabel])
+        let levelStackView = UIStackView(arrangedSubviews: [levelIconImageView,levelText , levelLabelValue])
         levelStackView.axis = .horizontal
         levelStackView.spacing = 5
         
@@ -222,4 +231,72 @@ class CustomNavigationBar: UIView {
             presentingVC.present(popupVC, animated: true, completion: nil)
         }
     }
+    
+    func updateCoinsValue(newCoinsValue: Int) {
+        // Store the old coin value
+        let oldCoinsValue = currentCoins
+
+        // Update the currentCoins value
+        currentCoins = newCoinsValue
+
+        // Calculate the animation duration (adjust the duration as needed)
+        let animationDuration: Double = 1.0
+        let updateInterval: Double = 0.03 // Adjust as needed for a smoother or faster animation
+
+        // Calculate the step value for the animation
+        let stepValue = Double(newCoinsValue - oldCoinsValue) * updateInterval / animationDuration
+
+        // Create a Timer to update the label text in the animation loop
+        var animationTimer: Timer?
+
+        animationTimer = Timer.scheduledTimer(withTimeInterval: updateInterval, repeats: true) { timer in
+            // Calculate the new value for the label
+            let currentValue = Int(self.coinsLabel.text ?? "0") ?? 0
+            let newValue = Int(Double(currentValue) + stepValue)
+
+            // Update the label's text
+            self.coinsLabel.text = "\(newValue)"
+
+            // If the animation is complete, stop the Timer
+            if (stepValue > 0 && newValue >= newCoinsValue) || (stepValue < 0 && newValue <= newCoinsValue) {
+                self.coinsLabel.text = "\(newCoinsValue)"
+                timer.invalidate()
+            }
+        }
+    }
+    
+    func updateLevelValue(newLevel: Int) {
+        levelLabelValue.text = "\(newLevel)"
+    }
+    
+    func updateDiamondsValue(newDiamondsCount: Int) {
+        
+        let oldDiamonsCount = currentDiamonds
+        
+        currentDiamonds = newDiamondsCount
+        
+        let animationDuration: Double = 1.0
+        let updateInterval: Double = 0.03
+        
+        let stepValue = Double(newDiamondsCount - oldDiamonsCount) * updateInterval / animationDuration
+        
+        var animationTimer: Timer?
+        
+        animationTimer = Timer.scheduledTimer(withTimeInterval: updateInterval, repeats: true) { timer in
+            // Calculate the new value for the label
+            let currentValue = Int(self.diamondsLabel.text ?? "0") ?? 0
+            let newValue = Int(Double(currentValue) + stepValue)
+
+            // Update the label's text
+            self.diamondsLabel.text = "\(newValue)"
+
+            // If the animation is complete, stop the Timer
+            if (stepValue > 0 && newValue >= newDiamondsCount) || (stepValue < 0 && newValue <= newDiamondsCount) {
+                self.diamondsLabel.text = "\(newDiamondsCount)"
+                timer.invalidate()
+            }
+        }
+
+    }
+    
 }

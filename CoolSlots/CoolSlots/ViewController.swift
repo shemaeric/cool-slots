@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var slotMachineView: SlotMachineView!
-
+    var customNavBar: CustomNavigationBar!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,8 +26,7 @@ class ViewController: UIViewController {
         let navBarWidth = view.frame.width * 0.9
 
         // Create a custom navigation bar
-        let customNavBar = CustomNavigationBar(width: navBarWidth, presentingViewController: self)
-
+        customNavBar = CustomNavigationBar(width: navBarWidth, presentingViewController: self)
         // Center the custom navigation bar horizontally on the screen
         customNavBar.center.x = view.center.x
 
@@ -77,6 +76,10 @@ class ViewController: UIViewController {
         // Create a custom bottom bar
         let customBottomBar = CustomBottomBar(width: navBarWidth, parentHeight: view.frame.height, presentingViewController: self)
         customBottomBar.spinFunc = slotMachineView.spin
+        customBottomBar.updateCoins = customNavBar.updateCoinsValue(newCoinsValue:)
+        customBottomBar.updateLevel = customNavBar.updateLevelValue(newLevel:)
+        customBottomBar.updateDiamonds = customNavBar.updateDiamondsValue(newDiamondsCount:)
+        
         // Center the custom bottom bar horizontally on the screen
         customBottomBar.center.x = view.center.x
         

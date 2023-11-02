@@ -13,6 +13,14 @@ class CustomBottomBar: UIView {
     
     private weak var presentingViewController: UIViewController?
     var spinFunc: (() -> Void)?
+    var updateCoins: ((_ coins: Int) -> Void)?
+    var updateLevel: ((_ levl: Int) -> Void)?
+    var updateDiamonds: ((_ diamonds: Int) -> Void)?
+    var currentTotalWins: Int = 0
+    var totalWinsLabel: UILabel!
+    var currentBetValue: Int = 500
+    var betLabel: UILabel!
+    
     // MARK: - Initialization
     
     init(width: CGFloat, parentHeight: CGFloat, presentingViewController: UIViewController?) {
@@ -96,8 +104,8 @@ class CustomBottomBar: UIView {
         ])
         
         // Create a label for displaying the bet amount
-        let betLabel = UILabel()
-        betLabel.text = "10000000" // You can set the initial value
+        betLabel = UILabel()
+        betLabel.text = "\(currentBetValue)"
         betLabel.textColor = UIColor.white
         betLabel.font = UIFont.bebasNeueFont(ofSize: 20)
         
@@ -159,9 +167,9 @@ class CustomBottomBar: UIView {
         stackView.spacing = 5
 
         // Create a label for displaying the total win amount
-        let winLabel = UILabel()
-        winLabel.text = "10000000"
-        winLabel.font = UIFont.bebasNeueFont(ofSize: 24)
+        totalWinsLabel = UILabel()
+        totalWinsLabel.text = "\(currentTotalWins)"
+        totalWinsLabel.font = UIFont.bebasNeueFont(ofSize: 24)
 
         // Create a label for the sublabel (e.g., "wins")
         let subLabel = UILabel()
@@ -169,7 +177,7 @@ class CustomBottomBar: UIView {
         subLabel.textColor = .gray
 
         // Add the winLabel and subLabel to the stack view
-        stackView.addArrangedSubview(winLabel)
+        stackView.addArrangedSubview(totalWinsLabel)
 //        stackView.addArrangedSubview(subLabel)
 
         // Add the stackView to the totalWinView
@@ -222,15 +230,58 @@ class CustomBottomBar: UIView {
     
     @objc private func decreaseBet() {
         // Handle the logic to decrease the bet amount here
-        // Update the betLabel text accordingly
+        if currentBetValue > 0 {
+            currentBetValue -= 100 // You can change the decrement amount as needed
+            updateBetLabel()
+        }
     }
-    
+
     @objc private func increaseBet() {
         // Handle the logic to increase the bet amount here
-        // Update the betLabel text accordingly
+        currentBetValue += 100 // You can change the increment amount as needed
+        updateBetLabel()
+    }
+
+    private func updateBetLabel() {
+        // Update the betLabel text with the current bet value
+        betLabel.text = "\(currentBetValue)"
+    }
+    
+    func updateTotalWinsValue(newTotalWinsCount: Int) {
+        
+        let oldTotalWinsCount = currentTotalWins
+        
+        currentTotalWins = newTotalWinsCount
+        
+        let animationDuration: Double = 1.0
+        let updateInterval: Double = 0.03
+        
+        let stepValue = Double(newTotalWinsCount - oldTotalWinsCount) * updateInterval / animationDuration
+        
+        var animationTimer: Timer?
+        
+        animationTimer = Timer.scheduledTimer(withTimeInterval: updateInterval, repeats: true) { timer in
+            // Calculate the new value for the label
+            let currentValue = Int(self.totalWinsLabel.text ?? "0") ?? 0
+            let newValue = Int(Double(currentValue) + stepValue)
+
+            // Update the label's text
+            self.totalWinsLabel.text = "\(newValue)"
+
+            // If the animation is complete, stop the Timer
+            if (stepValue > 0 && newValue >= newTotalWinsCount) || (stepValue < 0 && newValue <= newTotalWinsCount) {
+                self.totalWinsLabel.text = "\(newTotalWinsCount)"
+                timer.invalidate()
+            }
+        }
+
     }
     
     @objc private func spinBtn() {
         spinFunc?()
+        updateCoins?(2000)
+        updateLevel?(2)
+        updateDiamonds?(1000)
+        updateTotalWinsValue(newTotalWinsCount: 40000)
     }
 }
