@@ -14,7 +14,7 @@ class CustomNavigationBar: UIView {
     private weak var presentingViewController: UIViewController?
     
     private let height: CGFloat
-    var currentCoins: Int = 1000
+    var currentCoins: Int = AppConstants.defaultCoins
     var currentDiamonds: Int = 20
     var currentLevel: Int = 0
     
@@ -126,7 +126,7 @@ class CustomNavigationBar: UIView {
         
         stackView.addArrangedSubview(coinsIconImageView)
         
-        let coinsAmountLabel = createLabel(text: "\(currentCoins)", fontSize: 16, bold: true, textColor: .white)
+        let coinsAmountLabel = createLabel(text: "\(AppConstants.defaultCoins)", fontSize: 16, bold: true, textColor: .white)
         coinsLabel = coinsAmountLabel
         stackView.addArrangedSubview(coinsLabel)
         
@@ -234,10 +234,10 @@ class CustomNavigationBar: UIView {
     
     func updateCoinsValue(newCoinsValue: Int) {
         // Store the old coin value
-        let oldCoinsValue = currentCoins
+        let oldCoinsValue = AppConstants.defaultCoins
 
         // Update the currentCoins value
-        currentCoins = newCoinsValue
+        AppConstants.defaultCoins = newCoinsValue
 
         // Calculate the animation duration (adjust the duration as needed)
         let animationDuration: Double = 1.0

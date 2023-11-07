@@ -13,9 +13,6 @@ class CustomBottomBar: UIView {
     
     private weak var presentingViewController: UIViewController?
     var spinFunc: (() -> Void)?
-    var updateCoins: ((_ coins: Int) -> Void)?
-    var updateLevel: ((_ levl: Int) -> Void)?
-    var updateDiamonds: ((_ diamonds: Int) -> Void)?
     var currentTotalWins: Int = 0
     var totalWinsLabel: UILabel!
     var currentBetValue: Int = 500
@@ -232,6 +229,7 @@ class CustomBottomBar: UIView {
         // Handle the logic to decrease the bet amount here
         if currentBetValue > 0 {
             currentBetValue -= 100 // You can change the decrement amount as needed
+            AppConstants.defaultCoins -= 100
             updateBetLabel()
         }
     }
@@ -239,6 +237,7 @@ class CustomBottomBar: UIView {
     @objc private func increaseBet() {
         // Handle the logic to increase the bet amount here
         currentBetValue += 100 // You can change the increment amount as needed
+        AppConstants.defaultCoins += 100
         updateBetLabel()
     }
 
@@ -279,9 +278,6 @@ class CustomBottomBar: UIView {
     
     @objc private func spinBtn() {
         spinFunc?()
-        updateCoins?(2000)
-        updateLevel?(2)
-        updateDiamonds?(1000)
-        updateTotalWinsValue(newTotalWinsCount: 40000)
+//        updateTotalWinsValue(newTotalWinsCount: 40000)
     }
 }

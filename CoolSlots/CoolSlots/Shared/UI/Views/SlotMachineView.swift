@@ -17,6 +17,10 @@ class SlotMachineView: UIView {
     var reels: [[UIImageView]] = []
     var currentSymbols: [[SlotSymbol]] = []
     var winAnimationFunc: (() -> Void)?
+    var updateCoins: ((_ coins: Int) -> Void)?
+    var updateLevel: ((_ levl: Int) -> Void)?
+    var updateDiamonds: ((_ diamonds: Int) -> Void)?
+    var updateTotalWins: ((_ wins: Int) -> Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -172,10 +176,14 @@ class SlotMachineView: UIView {
         // Display the result to the user
         print("Total Win: \(totalWin)")
         
-        if let animationSymbol = winAnimationSymbol {
-            
+        if winAnimationSymbol != nil {
+            winAnimationFunc?()
         }
         
+        updateCoins?(AppConstants.defaultCoins + totalWin)
+        updateLevel?(2)
+        updateDiamonds?(1000)
+        updateTotalWins?(totalWin)
         // Finally, re-enable user interaction.
         isUserInteractionEnabled = true
     }

@@ -13,6 +13,8 @@
 		273CD50C2AE1011900985C0E /* SlotMachineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273CD50B2AE1011900985C0E /* SlotMachineView.swift */; };
 		273CD50E2AE171BA00985C0E /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273CD50D2AE171BA00985C0E /* BottomBar.swift */; };
 		275035542ADFB642004726E7 /* ProfilePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275035532ADFB642004726E7 /* ProfilePopup.swift */; };
+		277381502AF509B6003B5FCB /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2773814F2AF509B6003B5FCB /* AppConstants.swift */; };
+		277381532AF50B98003B5FCB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277381522AF50B98003B5FCB /* Utilities.swift */; };
 		279ED2552AEBABBB009A76C2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 279ED2542AEBABBB009A76C2 /* Lottie */; };
 		279ED2582AEBACA6009A76C2 /* loader777.json in Resources */ = {isa = PBXBuildFile; fileRef = 279ED2572AEBACA6009A76C2 /* loader777.json */; };
 		279ED25B2AEBB558009A76C2 /* SlotSpinningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279ED25A2AEBB558009A76C2 /* SlotSpinningView.swift */; };
@@ -59,6 +61,8 @@
 		273CD50B2AE1011900985C0E /* SlotMachineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotMachineView.swift; sourceTree = "<group>"; };
 		273CD50D2AE171BA00985C0E /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		275035532ADFB642004726E7 /* ProfilePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePopup.swift; sourceTree = "<group>"; };
+		2773814F2AF509B6003B5FCB /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		277381522AF50B98003B5FCB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		279ED2572AEBACA6009A76C2 /* loader777.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader777.json; sourceTree = "<group>"; };
 		279ED25A2AEBB558009A76C2 /* SlotSpinningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotSpinningView.swift; sourceTree = "<group>"; };
 		279ED25E2AEBD27E009A76C2 /* winCoins.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = winCoins.json; sourceTree = "<group>"; };
@@ -118,6 +122,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		277381512AF50B82003B5FCB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				277381522AF50B98003B5FCB /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		279ED2562AEBAC84009A76C2 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +158,7 @@
 		279F5E822ACB37B9000FCF70 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				277381512AF50B82003B5FCB /* Utilities */,
 				27BABC482AF3C8A500B79A6E /* Model */,
 				279F5E832ACB37C7000FCF70 /* UI */,
 			);
@@ -277,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				27BABC492AF3C8BD00B79A6E /* SlotData.swift */,
+				2773814F2AF509B6003B5FCB /* AppConstants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -432,7 +446,9 @@
 				279F5E892ACB38C2000FCF70 /* LoaderView.swift in Sources */,
 				273CD50E2AE171BA00985C0E /* BottomBar.swift in Sources */,
 				273CD50C2AE1011900985C0E /* SlotMachineView.swift in Sources */,
+				277381532AF50B98003B5FCB /* Utilities.swift in Sources */,
 				279ED2612AEBD2D1009A76C2 /* WinCoinsView.swift in Sources */,
+				277381502AF509B6003B5FCB /* AppConstants.swift in Sources */,
 				27BABC4A2AF3C8BD00B79A6E /* SlotData.swift in Sources */,
 				27A8D99D2ACADD9F00078E74 /* AppDelegate.swift in Sources */,
 				27A8D99F2ACADD9F00078E74 /* SceneDelegate.swift in Sources */,
