@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -378,7 +378,7 @@
 				};
 			};
 			buildConfigurationList = 27A8D9942ACADD9F00078E74 /* Build configuration list for PBXProject "CoolSlots" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -630,7 +630,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W4ZGXHX466;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoolSlots/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Luxury Slots Game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots Game";
@@ -662,7 +662,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = W4ZGXHX466;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoolSlots/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Luxury Slots Game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots Game";
