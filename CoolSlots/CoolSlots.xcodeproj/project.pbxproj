@@ -13,6 +13,7 @@
 		273CD50C2AE1011900985C0E /* SlotMachineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273CD50B2AE1011900985C0E /* SlotMachineView.swift */; };
 		273CD50E2AE171BA00985C0E /* BottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273CD50D2AE171BA00985C0E /* BottomBar.swift */; };
 		275035542ADFB642004726E7 /* ProfilePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275035532ADFB642004726E7 /* ProfilePopup.swift */; };
+		2764C9992B0A511C00486099 /* SettingsPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2764C9982B0A511C00486099 /* SettingsPopup.swift */; };
 		277381502AF509B6003B5FCB /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2773814F2AF509B6003B5FCB /* AppConstants.swift */; };
 		277381532AF50B98003B5FCB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277381522AF50B98003B5FCB /* Utilities.swift */; };
 		279ED2552AEBABBB009A76C2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 279ED2542AEBABBB009A76C2 /* Lottie */; };
@@ -61,6 +62,7 @@
 		273CD50B2AE1011900985C0E /* SlotMachineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotMachineView.swift; sourceTree = "<group>"; };
 		273CD50D2AE171BA00985C0E /* BottomBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBar.swift; sourceTree = "<group>"; };
 		275035532ADFB642004726E7 /* ProfilePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePopup.swift; sourceTree = "<group>"; };
+		2764C9982B0A511C00486099 /* SettingsPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPopup.swift; sourceTree = "<group>"; };
 		2773814F2AF509B6003B5FCB /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		277381522AF50B98003B5FCB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		279ED2572AEBACA6009A76C2 /* loader777.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loader777.json; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				279F5E882ACB38C2000FCF70 /* LoaderView.swift */,
 				275035532ADFB642004726E7 /* ProfilePopup.swift */,
+				2764C9982B0A511C00486099 /* SettingsPopup.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				273CD50E2AE171BA00985C0E /* BottomBar.swift in Sources */,
 				273CD50C2AE1011900985C0E /* SlotMachineView.swift in Sources */,
 				277381532AF50B98003B5FCB /* Utilities.swift in Sources */,
+				2764C9992B0A511C00486099 /* SettingsPopup.swift in Sources */,
 				279ED2612AEBD2D1009A76C2 /* WinCoinsView.swift in Sources */,
 				277381502AF509B6003B5FCB /* AppConstants.swift in Sources */,
 				27BABC4A2AF3C8BD00B79A6E /* SlotData.swift in Sources */,
@@ -630,15 +634,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W4ZGXHX466;
+				DEVELOPMENT_TEAM = X82YGTMC7D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoolSlots/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Luxury Slots Game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots Game";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.casino-games";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -662,15 +667,16 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W4ZGXHX466;
+				DEVELOPMENT_TEAM = X82YGTMC7D;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CoolSlots/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Luxury Slots Game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots game\nNo Results\nLuxury Slots Game";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.casino-games";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -209,6 +209,7 @@ class CustomNavigationBar: UIView {
     private func createSettingsButton() -> UIButton {
         let settingsButton = UIButton(type: .custom)
         settingsButton.setImage(UIImage(systemName: "gear")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        settingsButton.addTarget(self, action: #selector(showSettingsPopup), for: .touchUpInside)
         settingsButton.tintColor = .goldColor
         return settingsButton
     }
@@ -224,6 +225,16 @@ class CustomNavigationBar: UIView {
     
     @objc private func showPopup() {
         let popupVC = ProfilePopup()
+        popupVC.modalPresentationStyle = .overCurrentContext
+        
+        // Check if the presenting view controller is available
+        if let presentingVC = presentingViewController {
+            presentingVC.present(popupVC, animated: true, completion: nil)
+        }
+    }
+    
+    @objc private func showSettingsPopup() {
+        let popupVC = SettingsPopup()
         popupVC.modalPresentationStyle = .overCurrentContext
         
         // Check if the presenting view controller is available
