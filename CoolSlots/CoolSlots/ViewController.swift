@@ -72,7 +72,13 @@ class ViewController: UIViewController {
         
         // Create a parent view for the slotMachineView
         let parentView = UIView()
-        parentView.frame = CGRect(x: 0, y: 0, width: view.frame.width / 2, height: view.frame.height / 1.5)
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            parentView.frame = CGRect(x: 0, y: 0, width: view.frame.width / 1.1, height: view.frame.height / 2)
+        } else {
+            parentView.frame = CGRect(x: 0, y: 0, width: view.frame.width / 2, height: view.frame.height / 1.5)
+        }
+        
         parentView.center = view.center
         parentView.backgroundColor = UIColor.slotBackground()
         parentView.layer.borderColor = UIColor.goldColor.cgColor
